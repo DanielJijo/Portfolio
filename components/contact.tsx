@@ -206,7 +206,7 @@ export default function Contact() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="text-center mt-16 pt-8 border-t border-gray-700"
         >
-          <p className="text-gray-400">© 2025 Daniel Jijo P P. All rights reserved. Built with React & Tailwind CSS.</p>
+          <p className="text-black font-medium">© 2025 Daniel Jijo P P. All rights reserved. Built with React & Tailwind CSS.</p>
         </motion.div>
       </div>
     </section>
