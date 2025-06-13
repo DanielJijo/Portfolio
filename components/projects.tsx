@@ -119,28 +119,24 @@ export default function Projects() {
                 </div>
 
                 <div className="flex gap-4">
-                  <motion.a
+                  <a
                     href={project.links.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg transition-colors"
+                    className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                   >
-                    <Github size={16} />
-                    Code
-                  </motion.a>
-                  <motion.a
+                    <Github size={20} />
+                    <span>Code</span>
+                  </a>
+                  <a
                     href={project.links.demo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="flex items-center gap-2 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 px-4 py-2 rounded-lg transition-all"
+                    className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors"
                   >
-                    <ExternalLink size={16} />
-                    VIEW
-                  </motion.a>
+                    <ExternalLink size={20} />
+                    <span>VIEW</span>
+                  </a>
                 </div>
               </div>
             </motion.div>

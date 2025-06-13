@@ -10,23 +10,14 @@ export default function About() {
   const isInView = useInView(ref, { once: true })
 
   return (
-    <section id="about" className="py-20 px-4">
+    <section id="about" className="relative py-20 px-4 -mt-20">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          ref={ref}
-          initial={{ opacity: 0, y: 50 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            About <span className="text-blue-400">Me</span>
-          </h2>
-          <div className="w-24 h-1 bg-blue-400 mx-auto"></div>
-        </motion.div>
+        <h2 className="text-4xl font-bold text-center mb-4">About Me</h2>
+        <div className="w-24 h-1 bg-blue-400 mx-auto mb-16"></div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
+            ref={ref}
             initial={{ opacity: 0, x: -50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
             transition={{ duration: 0.8, delay: 0.2 }}

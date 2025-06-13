@@ -1,19 +1,26 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { ThemeProvider } from 'next-themes'
+import { Inter } from 'next/font/google'
+import Navbar from '@/components/navbar'
+import { ClientOnly } from '@/components/ClientOnly'
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'My Portfolio',
-  description: 'A modern portfolio site built with Next.js',
+  title: 'Daniel Jijo P P',
+  description: 'Portfolio website of Daniel Jijo P P',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning className="min-h-screen bg-gradient-to-br from-black to-white">
-      <body className="min-h-screen bg-gradient-to-br from-black to-white text-white">
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
-        </ThemeProvider>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${inter.className} text-white min-h-screen relative overflow-x-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950`}>
+        <div className="relative z-10">
+          <Navbar />
+          <main>
+            {children}
+          </main>
+        </div>
       </body>
     </html>
   )

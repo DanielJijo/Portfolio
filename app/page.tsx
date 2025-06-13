@@ -7,7 +7,7 @@ import Skills from "@/components/skills"
 import Projects from "@/components/projects"
 import Resume from "@/components/resume"
 import Contact from "@/components/contact"
-import Navbar from "@/components/navbar"
+import { DockWrapper } from "@/components/dock-wrapper"
 
 export default function Home() {
   useEffect(() => {
@@ -29,7 +29,6 @@ export default function Home() {
 
   return (
     <div className="min-h-screen w-full">
-      <Navbar />
       <main className="w-full">
         <Hero />
         <About />
@@ -38,6 +37,7 @@ export default function Home() {
         <Resume />
         <Contact />
       </main>
+      <DockWrapper />
     </div>
   )
 }

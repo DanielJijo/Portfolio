@@ -46,7 +46,7 @@ export default function Resume() {
   ]
 
   return (
-    <section id="resume" className="py-20 px-4 bg-gray-800/50">
+    <section id="resume" className="py-20 px-4">
       <div className="max-w-6xl mx-auto">
         <motion.div
           ref={ref}
@@ -58,29 +58,29 @@ export default function Resume() {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             My <span className="text-blue-400">Resume</span>
           </h2>
-          <div className="w-24 h-1 bg-blue-400 mx-auto mb-8"></div>
-
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.button
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(96, 165, 250, 0.3)" }}
+          <div className="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
+          <div className="flex justify-center gap-4">
+            <motion.a
+              href="/resume.pdf"
+              download
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 justify-center"
+              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
             >
               <Download size={20} />
-              Download Resume
-            </motion.button>
+              Download CV
+            </motion.a>
             <motion.a
               href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-gray-900 px-8 py-3 rounded-full font-semibold transition-all duration-300 flex items-center gap-2 justify-center"
+              className="flex items-center gap-2 border border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white px-6 py-3 rounded-lg transition-all"
             >
               <Eye size={20} />
               View Online
             </motion.a>
-
           </div>
         </motion.div>
 

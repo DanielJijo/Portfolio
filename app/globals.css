@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-gray-900 text-white;
+    @apply text-white;
   }
 }
 
@@ -38,4 +38,9 @@
 /* Smooth animations */
 * {
   transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Glass morphism */
+.glass {
+  @apply backdrop-blur-md bg-white/10 border border-white/20;
 }
