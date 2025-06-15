@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} text-white min-h-screen relative overflow-x-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-gray-950`}>
+      <body className={`${inter.className} text-white min-h-screen relative overflow-x-hidden bg-gradient-to-br from-black via-zinc-950 to-zinc-900`}>
         <div className="relative z-10">
           <Navbar />
           <main>
