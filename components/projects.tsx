@@ -16,11 +16,11 @@ export default function Projects() {
       description:
         "Streaming UI with React: Built responsive frontend using React and styled-components with modern design patterns.",
       tech: ["React", "Styled Components", "JavaScript", "Responsive Design"],
-      date: "Jan - Feb 2025",
+      date: "2025",
       color: "from-neutral-900 to-neutral-800",
       image: "/images/netflix-signin.jpg",
       links: {
-        github: "#",
+        github: "https://github.com/DanielJijo/netflix-clone",
         demo: "#"
       }
     },
@@ -30,7 +30,7 @@ export default function Projects() {
       tech: ["React", "Node.js", "Database", "Full Stack"],
       date: "2024",
       color: "from-neutral-900 to-neutral-800",
-      image: "/images/habitsync-signin.jpg",
+      image: "/images/Habitsync-signin.jpg",
       links: {
         github: "#",
         demo: "https://habitsync-gold.vercel.app/"
@@ -53,11 +53,11 @@ export default function Projects() {
       description:
         "Professional portfolio website for a makeover artist, featuring services, gallery, and client testimonials.",
       tech: ["Next.js", "Tailwind CSS", "React", "Responsive Design"],
-      date: "2024",
+      date: "2025",
       color: "from-purple-500 to-indigo-500",
       image: "/images/makeover-portfolio.jpg",
       links: {
-        github: "#",
+        github: "https://github.com/DanielJijo/teena-makeovers",
         demo: "https://teena-makeovers.vercel.app/"
       }
     },
@@ -85,7 +85,7 @@ export default function Projects() {
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
+              transition={{ duration: 0.4, delay: index * 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
               className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl group hover:project-card-glow"
             >

@@ -33,13 +33,13 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex flex-col items-center justify-center py-20 px-4 overflow-hidden"
+      className="relative min-h-screen flex flex-col items-center justify-center py-64 px-4 overflow-hidden"
     >
       <motion.div 
         variants={containerVariants} 
         initial="hidden" 
         animate="visible" 
-        className="text-center z-10 px-4"
+        className="text-center z-10 w-full"
       >
         <motion.div variants={itemVariants} className="mb-6">
           <h1 className="text-5xl md:text-7xl font-bold mb-4 flex flex-col md:flex-row items-center justify-center gap-2">
@@ -80,7 +80,7 @@ export default function Hero() {
           />
         </motion.div>
 
-        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+        <motion.div variants={itemVariants} className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
           <motion.a
             href="#projects"
             whileHover={{ scale: 1.05, boxShadow: "0 10px 25px rgba(96, 165, 250, 0.3)" }}
@@ -99,10 +99,18 @@ export default function Hero() {
           </motion.a>
         </motion.div>
 
-        <ScrollVelocity 
-          text="Full Stack Developer & Problem Solver"
-          className="mb-20 text-gray-300"
-        />
+        <div className="mt-auto w-full pb-56">
+          <ScrollVelocity 
+            text="PROGRESS, NOT PERFECTION"
+            className="mt-20 mb-4 text-4xl md:text-6xl text-gray-300 whitespace-nowrap pl-56"
+            velocity={200}
+          />
+          <ScrollVelocity 
+            text="START NOW, IMPROVE LATER"
+            className="mb-20 text-4xl md:text-6xl text-gray-300 whitespace-nowrap"
+            velocity={-200}
+          />
+        </div>
       </motion.div>
     </section>
   )

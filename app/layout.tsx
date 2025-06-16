@@ -19,12 +19,12 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body className={`${inter.className} text-white min-h-screen relative overflow-x-hidden bg-gradient-to-br from-black via-zinc-900 to-white/10`}>
         <DockHoverProvider>
           <MouseTracker />
-          <div className="relative z-10">
-            <Navbar />
-            <main>
-              {children}
-            </main>
-          </div>
+        <div className="relative z-10">
+          <Navbar />
+          <main>
+            {children}
+          </main>
+        </div>
         </DockHoverProvider>
       </body>
     </html>
