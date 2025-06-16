@@ -49,15 +49,16 @@ export default function Projects() {
       }
     },
     {
-      title: "AI Skill-Sharing Platform",
+      title: "Makeover Portfolio",
       description:
-        "Contributed to frontend and backend, integrated AI for intelligent user matching and skill recommendations.",
-      tech: ["AI Integration", "Full Stack", "User Matching", "React"],
+        "Professional portfolio website for a makeover artist, featuring services, gallery, and client testimonials.",
+      tech: ["Next.js", "Tailwind CSS", "React", "Responsive Design"],
       date: "2024",
       color: "from-purple-500 to-indigo-500",
+      image: "/images/makeover-portfolio.jpg",
       links: {
         github: "#",
-        demo: "#"
+        demo: "https://teena-makeovers.vercel.app/"
       }
     },
   ]
@@ -86,7 +87,7 @@ export default function Projects() {
               animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               whileHover={{ y: -10, scale: 1.02 }}
-              className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl group"
+              className="bg-gray-800 rounded-xl overflow-hidden shadow-2xl group hover:project-card-glow"
             >
               <div className={`h-48 bg-gradient-to-br ${project.color} relative overflow-hidden`}>
                 {project.image && (

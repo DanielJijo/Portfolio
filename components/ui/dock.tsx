@@ -3,6 +3,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import Image from "next/image"
+import { useDockHover } from '@/context/DockHoverContext'
 
 interface DockItem {
   name: string
@@ -15,12 +16,16 @@ interface DockProps {
 }
 
 export function Dock({ items }: DockProps) {
+  const { setIsHoveringDock } = useDockHover()
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
       className="backdrop-blur-md bg-white/10 border border-white/20 rounded-full p-2 shadow-lg"
+      onMouseEnter={() => setIsHoveringDock(true)}
+      onMouseLeave={() => setIsHoveringDock(false)}
     >
       <div className="flex items-center gap-2">
         {items.map((item, index) => (
@@ -41,7 +46,7 @@ export function Dock({ items }: DockProps) {
               />
             </div>
             <div
-              className="absolute -top-8 left-1/2 -translate-x-1/2 px-2 py-1 bg-black/80 text-white text-xs rounded whitespace-nowrap opacity-0 group-hover:opacity-100 group-hover:-top-10 transition-all duration-200"
+              className="absolute -top-10 left-1/2 -translate-x-1/2 px-3 py-2 bg-black/80 text-white text-sm rounded whitespace-nowrap opacity-0 group-hover:opacity-100 group-hover:-top-12 transition-all duration-200"
             >
               {item.name}
             </div>
