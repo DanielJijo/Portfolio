@@ -21,7 +21,7 @@ export default function Projects() {
       image: "/images/netflix-signin.jpg",
       links: {
         github: "https://github.com/DanielJijo/netflix-clone",
-        demo: "#"
+        demo: "https://netflix-clone-livid-phi.vercel.app/"
       }
     },
     {
