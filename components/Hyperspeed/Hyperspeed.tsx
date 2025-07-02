@@ -20,6 +20,7 @@ interface Distortion {
 }
 
 interface Distortions {
+  
   [key: string]: Distortion;
 }
 
